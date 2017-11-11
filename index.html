@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Business Name</h1>
+<p id="name"><!--Enterprise car rentals--></p>
+
+<h3>Economy Cars</h3>
+<p id="econCar"><!--Economy--></p>
+
+<h3>Economy cars available</h3>
+<p id="ECavail"><!--90--></p>
+
+<h3>Midsize cars</h3>
+<p id="midCar"><!--Midsize--></p>
+
+<h3>Mid size cars available</h3>
+<p id="midAvail"><!--180--> </p>
+ 
+ 
+<button type="button" onclick="myCar()">Update availablelity</button> <!--button 1--> 
+
+<button type="button" onclick="midCar()">rent out 1 midsize car </button> <!--180, button 2--> 
+
+<button type="button" onclick="Ecar()">rent out 1 economy car </button> <!--90, button 3-->
+
+</body>
+
+<script>
+
+var car = { 
+    name: 'Enterpize Car Rental',
+    carAvailable: 90,
+    midAvavilable: 180,
+    econoCar: 'Economy',
+    midCars: 'midsize',
+  };
+
+    function myCar() { //button 1
+        document.getElementById("name").innerHTML = car.name; //Enterprise car rentals
+         document.getElementById("econCar").innerHTML = car.econoCar; //Economy
+          document.getElementById("midCar").innerHTML = car.midCars; //Midsize
+          document.getElementById("ECavail").innerHTML = car.carAvailable;
+          document.getElementById("midAvail").innerHTML = car.midAvavilable;
+         }
+    
+    function Ecar() { //button 3
+        document.getElementById("ECavail").innerHTML = car.carAvailable; //180
+        car.carAvailable = car.carAvailable--; //180 = 180-- (decreases)
+        return car.carAvailable--; //180-- (decreases)
+    }
+
+function midCar() { //button 2
+       document.getElementById("midAvail").innerHTML = car.midAvavilable; //90
+        car.midAvavilable = car.midAvavilable--; //90 = 90-- (decreases)
+        return car.midAvavilable--; //90-- s(decreases)
+    }
+
+
+//-N      function NameTheFunction() {   link to a button
+//-O         document.getElementById("id=''").innerHTML = var.NameOfAnObject;
+//-T          num = num-- (decreases)
+//-E         return num-- = (decrease a number by 1)
+//-S      }
+
+
+    
+    </script>
+</html>
